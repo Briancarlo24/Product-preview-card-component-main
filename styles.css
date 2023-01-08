@@ -112,9 +112,14 @@ body {
 .product,
 .product-desc,
 .price {
-  font-weight: 700;
+  font-weight: 500;
   color: var(--dark-grayish-blue);
   font-size: 1.7rem;
+}
+
+.product,
+.product-desc {
+  color: hsla(212, 21%, 14%, 0.5);
 }
 
 /* 900px */
@@ -154,6 +159,7 @@ body {
   font-size: 4rem;
   transition: transform 0.4s ease-in;
   cursor: pointer;
+  font-weight: 700;
 }
 
 .price-old {
