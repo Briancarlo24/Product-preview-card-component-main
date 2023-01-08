@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Fonts */
+
+/* COLORS */
+/* 
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+ */
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --container-width: 80rem;
+}
+
+/* Attribution Design */
+
+.attribution {
+  margin-top: 2rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  background-color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.main {
+  display: flex;
+  background-color: var(--white);
+  max-width: var(--container-width);
+  height: 60rem;
+  border-radius: 1.4rem;
+  overflow: hidden;
+}
+
+.main > * {
+  flex-basis: 100%;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: space-between;
+  max-width: 40rem;
+  padding: 5rem;
+}
+
+.product,
+.product-desc,
+.price {
+  font-weight: 700;
+  color: var(--dark-grayish-blue);
+  font-size: 1.2em;
+}
+
+.product {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.title {
+  font-family: "Fraunces", serif;
+  font-size: 2.95em;
+  line-height: 4.2rem;
+  margin-right: 2rem;
+}
+
+.product-desc {
+  line-height: 3rem;
+  margin-right: 2rem;
+}
+
+.price {
+  display: flex;
+  font-family: "Fraunces", serif;
+  align-items: center;
+}
+
+.price-now {
+  color: var(--dark-cyan);
+  margin-right: 2rem;
+  font-size: 3em;
+}
+
+.price-old {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  text-decoration: line-through;
+}
+
+.button {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.35em;
+  height: 6rem;
+  border-radius: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button::before {
+  content: url(images/icon-cart.svg);
+  margin-right: 1.3rem;
+}
+.button:hover {
+  background-color: hsla(158, 36%, 37%, 0.9);
+}
+.price-now:hover .button {
+  transform: scale(80);
+}
