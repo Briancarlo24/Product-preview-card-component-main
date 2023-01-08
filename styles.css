@@ -5,6 +5,13 @@ html {
   font-size: 62.5%;
 }
 
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 *,
 ::after,
 ::before {
@@ -62,6 +69,16 @@ body {
   overflow: hidden;
 }
 
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  .main {
+    flex-direction: column;
+    height: auto;
+    margin: 2.5rem 5rem 0rem;
+    max-width: 50rem;
+  }
+}
+
 .main > * {
   flex-basis: 100%;
 }
@@ -70,6 +87,10 @@ body {
   width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/* 900px */
+@media only screen and (max-width: 56.25em) {
 }
 .container {
   display: flex;
@@ -80,12 +101,29 @@ body {
   padding: 5rem;
 }
 
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  .container {
+    max-width: 100%;
+    padding: 3.5rem;
+  }
+}
+
 .product,
 .product-desc,
 .price {
   font-weight: 700;
   color: var(--dark-grayish-blue);
-  font-size: 1.2em;
+  font-size: 1.7rem;
+}
+
+/* 900px */
+@media only screen and (max-width: 56.25em) {
+  .product,
+  .product-desc,
+  .price {
+    font-weight: 500;
+  }
 }
 
 .product {
@@ -95,14 +133,13 @@ body {
 
 .title {
   font-family: "Fraunces", serif;
-  font-size: 2.95em;
+  font-size: 4rem;
   line-height: 4.2rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 .product-desc {
   line-height: 3rem;
-  margin-right: 2rem;
 }
 
 .price {
@@ -114,7 +151,9 @@ body {
 .price-now {
   color: var(--dark-cyan);
   margin-right: 2rem;
-  font-size: 3em;
+  font-size: 4rem;
+  transition: transform 0.4s ease-in;
+  cursor: pointer;
 }
 
 .price-old {
@@ -122,13 +161,14 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
   text-decoration: line-through;
+  transition: transform 0.4s ease-in;
 }
 
 .button {
   background-color: var(--dark-cyan);
   color: var(--white);
   font-weight: 700;
-  font-size: 1.35em;
+  font-size: 1.8rem;
   height: 6rem;
   border-radius: 1rem;
   border: none;
@@ -140,8 +180,11 @@ body {
   margin-right: 1.3rem;
 }
 .button:hover {
-  background-color: hsla(158, 36%, 37%, 0.9);
+  background-color: hsl(158, 47%, 22%);
 }
-.price-now:hover .button {
-  transform: scale(80);
+.price-now:hover {
+  transform: scale(1.2) translateX(1rem);
+}
+.price-now:hover + .price-old {
+  transform: scale(0.8) translateX(1rem);
 }
